@@ -18,8 +18,12 @@ export default class Message extends React.Component{
           {/* within this div, there is a form that is created in which the user MUST enter their name as well as the message theyre editing, it will check the status of "edit" in which if it is not in editing form, will simply display the message that is to be edited. If the message is in editing form, the user will have to make the edits following the form constraints. */}
           { this.state.edit ?
             <form>
-              Sender: <input required id="name" name="name" type="text" defaultValue={this.props.message.name} /><br />
-              Message: <input required id="message" name="message" type="text" defaultValue={this.props.message.message} /><br /><br />
+              Sender: <input required id="name" name="name" type="text"
+              // this will set the value of the user name BEFORE it is edited to be whatever the users name is
+              defaultValue={this.props.message.name} /><br />
+              Message: <input required id="message" name="message" type="text"
+              // this will similarly set up the message BEFORE it is edited to whatver the message is 
+              defaultValue={this.props.message.message} /><br /><br />
               <input type="submit" value="Confirm" /><input type="button" value="Cancel"  />
             </form>
             :
