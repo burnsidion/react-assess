@@ -1,6 +1,5 @@
 //This app.js file could be considered as the "Head" of the application, things like the initial state are created here, which are then passed down to the different components via 'props'.
 import React, {Component} from 'react';
-import logo from './logo.svg';
 import './App.css';
 //line 6 imports the component called NewMessage.js whithin the Components folder, allowing communication between both the the head and component.
 //import NewMessage from './components/NewMessage';
